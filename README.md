@@ -1,4 +1,4 @@
-# proyecto-blazor-
+# proyecto-blazorr-
 # EventEase - Aplicación de Gestión de Eventos (Proyecto Blazor)
 
 Este proyecto fue desarrollado utilizando el marco Blazor y asistido en gran medida por Microsoft Copilot, siguiendo los requisitos de la tarea calificada.
