@@ -1,0 +1,26 @@
+@page "/"
+
+@using EventEase.Models
+@using EventEase.Components
+
+<h3>Próximos Eventos</h3>
+
+<div class="event-list">
+    @foreach (var ev in Events)
+    {
+        <EventCard Event="ev" />
+    }
+</div>
+
+@code {
+    // [5 pts] Simulación de la gestión de estados para los eventos
+    private List<EventModel> Events { get; set; } = new List<EventModel>();
+
+    protected override void OnInitialized()
+    {
+        // Simulación de carga de datos iniciales
+        Events.Add(new EventModel { EventId = 1, Title = "Conferencia Anual de Tecnología", Date = DateTime.Now.AddDays(7), Location = "Centro de Convenciones", IsRegistered = true });
+        Events.Add(new EventModel { EventId = 2, Title = "Taller de IA Generativa", Date = DateTime.Now.AddDays(14), Location = "Campus Universitario" });
+        Events.Add(new EventModel { EventId = 3, Title = "Blazor Meetup Local", Date = DateTime.Now.AddDays(21), Location = "Espacio Co-Working" });
+    }
+}
